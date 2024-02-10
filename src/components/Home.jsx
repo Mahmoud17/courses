@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import CourseComponent from './course-component'
+import { Link } from 'react-router-dom'
 
 function Home() {
     const courses= useSelector(state => state.courses)
@@ -10,9 +11,6 @@ function Home() {
         || course.description.toLowerCase().includes(searchQuery.toLowerCase())
         )
       );
-
-    
-    
 
     const handleSearchChange = (event) => {
         setSearchQuery(event.target.value);
@@ -25,10 +23,10 @@ function Home() {
 
         {filteredCourses.map(course => {
           return (
-          <div key={course.id} className='m-4'>
-            <h2 className='text-3xl text-blue-400'><Link to={`/course/${course.id}`}>{course.name}</Link></h2>
-            <p>{course.description}</p>
-          </div>
+            <>
+            <h2 className='text-3xl m-3 text-blue-400'><Link to={`/course/${course.id}`}>{course.name}</Link></h2>
+          <CourseComponent course={course} />
+          </>
         )
         })}
       </>
