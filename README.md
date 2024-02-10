@@ -1,8 +1,7 @@
-# React + Vite
+# Courses Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+simple app where students can explore available courses, and enroll in ones they're interested in
 
-Currently, two official plugins are available:
+you can view the details on enrolled courses in the "my-courses" page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+to run the app just clone the repo -> run the command npm install then npm run dev
